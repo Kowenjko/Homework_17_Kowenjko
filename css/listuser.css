@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+#upload-photo {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+img {
+    width: 50px;
+}
+
+i {
+    opacity: 1;
+    text-align: center;
+    font-size: 21px;
+}
+
+i:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#baselist {
+    width: 90%;
+    border: 1px solid #d8d8d8;
+    margin: 30px auto;
+}
+
+#baselist thead th {
+    font-weight: bold;
+    vertical-align: center;
+    text-align: center;
+    border: none;
+    padding: 10px 15px;
+    background: #d8d8d8;
+    font-size: 14px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+#baselist tbody td {
+
+    text-align: left;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: center;
+    text-align: center;
+}
+
+#baselist thead tr th:first-child,
+#baselist tbody tr td:first-child {
+    border-left: none;
+}
+
+#baselist thead tr th:last-child,
+#baselist tbody tr td:last-child {
+    border-right: none;
+}
+
+#baselist tbody tr:nth-child(even) {
+    background: #f3f3f3;
+}
+
+/* Button */
+.atuin-btn {
+    display: inline-flex;
+    margin: 10px;
+    text-decoration: none;
+    border: 2px solid #333;
+    position: relative;
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: rgb(56, 55, 55);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', Тahoma, sans-serif;
+    /* background: #337AB7; */
+    transition: box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.atuin-btn:hover,
+.atuin-btn:active,
+.atuin-btn:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+    color: rgb(51, 45, 45);
+}
+
+.atuin-btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, transparent, rgba(56, 55, 55, 0.2), transparent);
+    transition: left 0.7s;
+}
+
+.atuin-btn:hover:before,
+.atuin-btn:active:before,
+.atuin-btn:focus:before {
+    left: 100%;
+}
